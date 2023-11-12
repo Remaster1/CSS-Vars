@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --size-padding: 10px 20px;
+  --size-btn: 24px;
+}
+
+@media screen and (max-width: 420px) {
+  :root {
+    --size-btn: 20px;
+    --size-padding: 5px 10px;
+  }
+}
+
+[theme="dark"] {
+  --text-color: white;
+  --background-color: #1f1f1f;
+  --button-color: #3f3f3f;
+}
+
+[theme="white"] {
+  --text-color: black;
+  --background-color: white;
+  --button-color: #f0f0f0;
+}
+
+#block {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+#btn {
+  background-color: var(--button-color);
+  border-radius: 5px;
+  color: var(--text-color);
+  padding: var(--size-padding);
+  font-size: var(--size-btn);
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
